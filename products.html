@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnailShots - Товары</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo">
+    <nav class="nav-left">
+        <a href="index.html">Главная</a>
+        <a href="products.html">Товары</a>
+      </nav>
+      <nav class="nav-right">
+        <a href="users.html">Отзывы</a>
+        <a href="contact.html">FAQ</a>
+      </nav>
+  </header>
+  <main>
+    <h1>Наши товары</h1>
+    <div id="product-description">
+        <p>Здесь вы найдете широкий ассортимент фотопленок для любого стиля и проекта. Каждая пленка в нашем каталоге отобрана с особым вниманием, чтобы удовлетворить потребности как начинающих фотографов, так и профессионалов.</p>
+        <p>Каждая пленка - это возможность рассказать свою уникальную историю. Откройте для себя мир пленочной фотографии вместе с SnailShots!</p>
+      </div>
+       
+
+    <div class="filter-container">
+        <span>Отсортировать по цене</span>
+        <select id="sort-select">
+            <option value="asc">по возрастанию</option>
+            <option value="desc">по убыванию</option>
+        </select>
+      </div>
+    
+    <div class="product-list" id="product-list">
+        
+    </div>
+    
+    <div id="product-list" class="product-list"></div>
+  </main>
+
+
+
+  <div id="load-more-container" class="load-more-container">
+    <button id="load-more-btn" class="load-more-btn">Загрузить еще</button>
+    <img id="loading-gif" class="loading-gif" src="img/loading.gif" alt="Loading" style="display:none;">
+</div>
+
+
+
+<!-- Футер -->
+<footer class="footer">
+    <div class="footer-column">
+        <h4>Информация</h4>
+        <ul>
+            <li><a href="#">Справочная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Статьи</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Услуги</h4>
+        <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Оптовикам</a></li>
+            <li><a href="#">Гарантия качества</a></li>
+            <li><a href="#">Возврат товара</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Контакты</h4>
+        <ul>
+            <li><a href="#">+7 (123) 456-78-90</a></li>
+            <li><a href="#">example@snailshots.com</a></li>
+            <li><a href="#">Инстаграм</a></li>
+            <li><a href="#">Телеграм</a></li>
+            <li><a href="#">Вконтакте</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Поддержка</h4>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Условия использования</a></li>
+            <li><a href="#">Карта сайта</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Все права защищены © 2024</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

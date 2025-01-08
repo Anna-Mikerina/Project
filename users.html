@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пользователи</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo">
+        <nav class="nav-left">
+          <a href="index.html">Главная</a>
+          <a href="products.html">Товары</a>
+        </nav>
+        <nav class="nav-right">
+            <a href="users.html">Отзывы</a>
+            <a href="contact.html">FAQ</a>
+        </nav>
+      
+  </header>
+
+<main>
+    <h1>Отзывы пользователей</h1>
+    <div id="user-list"></div>
+</main>
+
+<script>
+    fetch('get_users.php')
+        .then(response => response.json())
+        .then(data => {
+            const userList = document.getElementById('user-list');
+            data.forEach(user => {
+                const userDiv = document.createElement('div');
+                userDiv.className = 'user';
+                userDiv.innerHTML = `<p><strong>Имя:</strong> ${user.name}</p>
+                                     <p><strong>Дата:</strong> ${user.date}</p>
+                                     <p><strong>Сообщение:</strong> ${user.message}</p>`;
+                userList.appendChild(userDiv);
+            });
+        })
+        .catch(error => console.error('Ошибка получения данных:', error));
+</script>
+
+
+  <footer class="footer">
+    <div class="footer-column">
+        <h4>Информация</h4>
+        <ul>
+            <li><a href="#">Справочная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Статьи</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Услуги</h4>
+        <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Оптовикам</a></li>
+            <li><a href="#">Гарантия качества</a></li>
+            <li><a href="#">Возврат товара</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Контакты</h4>
+        <ul>
+            <li><a href="#">+7 (123) 456-78-90</a></li>
+            <li><a href="#">example@snailshots.com</a></li>
+            <li><a href="#">Инстаграм</a></li>
+            <li><a href="#">Телеграм</a></li>
+            <li><a href="#">Вконтакте</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Поддержка</h4>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Условия использования</a></li>
+            <li><a href="#">Карта сайта</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Все права защищены © 2024</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

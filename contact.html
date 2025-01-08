@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnailShots - FAQ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo">
+    <nav class="nav-left">
+        <a href="index.html">Главная</a>
+        <a href="products.html">Товары</a>
+    </nav>
+    <nav class="nav-right">
+        <a href="users.html">Отзывы</a>
+        <a href="contact.html" id="articles-link">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="contact-intro">
+        <h2>Спасибо, что остаетесь с нами</h2>
+        <p>Если у вас есть вопросы, предложения или вам нужна консультация, пожалуйста, свяжитесь с нами любым удобным способом. Наша команда готова ответить на все ваши вопросы и предоставить необходимую поддержку.</p>
+        <p>Мы всегда рады помочь вам!</p>
+    </div>
+
+    <div class="contact-intro">
+        <h1>Оставьте отзыв!</h1>
+        <p>Любой Ваш отзыв помогает нам становиться лучше</p>
+    </div>
+
+      
+    <form id="contact-form">
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Ваш Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Ваш комментарий:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <section id="faq">
+        <h2>Популярные вопросы</h2>
+      
+        <div class="faq-item">
+          <button class="faq-question">Как оформить заказ?</button>
+          <div class="faq-answer">
+            <p>Для оформления заказа добавьте товары в корзину и следуйте инструкциям на сайте.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">Какие способы оплаты доступны?</button>
+          <div class="faq-answer">
+            <p>Мы принимаем карты, электронные деньги и наложенный платеж.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">Как можно отследить заказ?</button>
+          <div class="faq-answer">
+            <p>После отправки заказа вам будет предоставлен номер для отслеживания.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">Как сделать возврат товара?</button>
+          <div class="faq-answer">
+            <p>Возврат товара возможен в течение 14 дней после получения при условии сохранения упаковки.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">Есть ли доставка в другие города?</button>
+          <div class="faq-answer">
+            <p>Да, мы осуществляем доставку по всей стране. Стоимость зависит от региона.</p>
+          </div>
+        </div>
+      </section>
+
+    <style>
+      
+      .faq-answer {
+        display: none;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    
+      .faq-item button {
+        background: #f4f4f4;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+      }
+    
+      .faq-item button:hover {
+        background: #ddd;
+      }
+    
+      .faq-question {
+      background: #f4f4f4;
+      padding: 7px;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-size: 19px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      }
+    
+      h2 {
+          font-size: 28px;
+          text-align: center;
+          margin-bottom: 20px;
+          font-weight: 700;
+      }
+    </style>
+
+      
+      <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+          button.addEventListener('click', () => {
+            const answer = button.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+          });
+        });
+      </script>
+
+
+
+    <div class="contact-intro">
+        <h3>Спасибо, что выбрали SnailShots!</h3>
+        <p>* за 10ый комментарий скидка 5%. Промокод придет вам на почту</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-column">
+        <h4>Информация</h4>
+        <ul>
+            <li><a href="#">Справочная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Статьи</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Услуги</h4>
+        <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Оптовикам</a></li>
+            <li><a href="#">Гарантия качества</a></li>
+            <li><a href="#">Возврат товара</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Контакты</h4>
+        <ul>
+            <li><a href="#">+7 (123) 456-78-90</a></li>
+            <li><a href="#">example@snailshots.com</a></li>
+            <li><a href="#">Инстаграм</a></li>
+            <li><a href="#">Телеграм</a></li>
+            <li><a href="#">Вконтакте</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h4>Поддержка</h4>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Условия использования</a></li>
+            <li><a href="#">Карта сайта</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>Все права защищены © 2024</p>
+    </div>
+  </footer>
+
+  <script>
+    // Функция для отображения уведомлений
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(function() {
+            notification.remove();
+        }, 1500);
+    }
+
+    // Обработчик отправки формы
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
+        });
+
+        fetch('save_contact.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formDataObject)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Данные успешно отправлены:', data);
+            showNotification('Сообщение отправлено успешно!');
+        })
+        .catch(error => {
+            console.error('Ошибка при отправке данных:', error);
+            showNotification('Произошла ошибка при отправке сообщения');
+        });
+    });
+
+    // Страница 404
+    function show404Page() {
+        document.body.innerHTML = `
+            <h1>404</h1>
+            <h2>Страница не найдена</h2>
+            <a href="/">Вернуться на главную</a>
+        `;
+    }
+
+    // Обработчик клика по ссылке "Статьи"
+    const articlesLink = document.getElementById('articles-link');
+    if (articlesLink) {
+        articlesLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            show404Page();
+        });
+    }
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
